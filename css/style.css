@@ -35,10 +35,10 @@ b{
  }
  .nav a{
      text-align: center;
-     margin-left: 30px;
+     margin-left: 10px;
      text-decoration: none;
      color: #F7F7F7;
-     padding: 1px 40px; 
+     padding: 1px 20px; 
      font-family: 'Cabin', sans-serif;
  }
  .nav a:hover{
