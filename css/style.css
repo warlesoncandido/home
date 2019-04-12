@@ -70,3 +70,32 @@ b{
     text-align: center;
     font-size: 20px;
 }
+.sobre{
+    border-bottom: 1px solid grey;
+    height: 500px;
+    width: 100%;
+    
+
+}
+.perfil{
+    position: relative;
+    width: 15opx;
+    height: 200px;
+    border:2px solid rgba(0, 0, 0, 0.3);
+    float: left;
+}
+h3{
+    position: relative;
+    text-align: center;
+    color: black;
+    top: 40px;
+    
+
+}
+p{
+    clear: both;
+}
+.center{
+    text-align: center;
+    clear: both;
+}
