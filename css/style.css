@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+ }
+ .cabecalho{
+     width: 100%;
+     height: 70px;
+     background:#F7F7F7;
+     
+ }
+
+.logoimg{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+h4{
+    position: absolute;
+    top: 15px;
+    left: 65px;
+    color: silver;
+    font-family: 'Cabin', sans-serif;
+}
+b{
+    color: black;
+}
+ .nav{
+    clear: both;
+    width: 100%;
+    height: 35px;
+    background: #374244;
+    
+
+ }
+ .nav a{
+     text-align: center;
+     margin-left: 30px;
+     text-decoration: none;
+     color: #F7F7F7;
+     padding: 1px 40px; 
+     font-family: 'Cabin', sans-serif;
+ }
+ .nav a:hover{
+  
+    background:#F7F7F7 ;
+    color: #374244;
+    
+}
+.imgCentral{
+
+   
+    border-bottom: 1px solid grey;
+    height: 500px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    background-image: url(../img/predios.jpg);
+    background-size: 100%;
+    margin-bottom: 10px;
+    clear: both;
+
+}
+.efeito{
+    top: 300px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    color: #F7F7F7;
+    width: 100%;
+    text-align: center;
+}
