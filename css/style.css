@@ -143,3 +143,16 @@ p{
     
 
 }
+
+/*Aba Projetos*/
+
+.projetos a{
+
+    display: block;
+    text-decoration: none;
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+    color: #374244;
+    margin-bottom: 5px;
+    text-align: center;
+}
