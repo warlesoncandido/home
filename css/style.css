@@ -104,6 +104,9 @@ p{
     text-align: center;
     clear: both;
 }
+.colSobre{
+    margin-bottom: 100px;
+}
 
 .coluna1{
     width: 300px;
@@ -143,6 +146,16 @@ p{
     
 
 }
+footer{
+    clear: both;
+    width: 100%;
+    height: 35px;
+    background: #374244;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #F7F7F7;
+
+}
 
 /*Aba Projetos*/
 
@@ -155,4 +168,22 @@ p{
     color: #374244;
     margin-bottom: 5px;
     text-align: center;
+}
+
+/*icon contatos*/
+.icon-contact{
+
+    width: 50px;
+    height: 50px;
+    
+    
+}
+.contact a{
+
+    text-decoration: none;
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+    color: #374244;
+    padding-right:10px; 
+    
 }
