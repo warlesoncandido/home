@@ -1,105 +1,104 @@
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.ico" >
-    <title>WarlesonCS</title>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="site">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>site</title>
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    var serviceWorkerVersion = '4223947939';
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
 
-       <div class="cabecalho container-fluid" id="cabecalho">
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing || reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
 
-            <img src="img/diamond.png" alt="" class="logoimg">
-            <h4><b>Warleson</b>CS</h4>
-
-
-       </div>
-       <div class="nav" id="nav" >
-           <a href="#" id="projeto">Meus Projetos</a>
-           <a href="#" id="contatos">Contatos</a>
-           
-       </div>
-
-     <div class="container col-md-12 col-sm-12" id="imgCentral">
-        <div class="container-fluid imgCentral ">
-
-            <div class="efeito">
-
-                <p>O Caminho onde vou trilhar</p>
-
-
-            </div>
-
-
-
-
-        </div>
-        <div class="container col-sm-12 sobre ">
-
-            <img src="img/perfil.jpg" alt="" class="rounded-circle perfil">
-            <h3>Warleson Candido da Silva</h3><br><br>
-            <p>Nascido  em Contagem/MG<br>
-            Morador de Betim/MG<br>
-            Casado<br>
-            Formado em <b>Analise e Desenvolvimento de Sistemas</b></p>
-            <p class="center"> Atualmente trabalhando com desenvolvedor Mobile dart FLUTTER
-                na empresa "E-SOFT SISTEMAS".
-            </p>
-
-        </div>
-        <div class="container  colSobre">
-            <h3>O que gosto de fazer?</h3>
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb coluna1">
-                    <img src="img/TorcidaMafiaAzul.jpg" alt="" id="img" class="gosto">
-                    <p>	O que eu mais gosto de fazer é acompanhar meu time no estádio
-                        ,então nos meus momentos de folga sempre estou no estádio.
-                        . 
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb coluna2">
-                    <img src="img/livro.jpg" alt="" id="img" class="gosto">
-                    <p>
-                        Antes eu não gostava de estudar, quando entrei na faculdade
-                        observei que era gostoso aprender coisas novas,hoje  faço cursos onlines
-                        pela plataforma Udemye outras, e sei o quanto e legal aprender coisas novas.
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb coluna3">
-                    <img src="img/churrasco.jpg" alt="" id="img" class="gosto">
-                    <p>
-                        Sempre que estou disponivel convido minha familia para participar  e confratenizar,
-                        e para isso nada melhor do que comer, assim eu e minha familia colocamos os "papos" em dia
-                        e revejo todos.
-
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-        <footer>warleson@2019 Todos os direitos reservados.</footer>
-
-
-
-    </div>
-
-
-
-
-
-
-    <script src="js/scripit.js"></script>
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
 </body>
 </html>
